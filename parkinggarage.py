@@ -22,32 +22,39 @@
 
 
 class Garage:
-    def __init__(self, ticket, parking_spaces, current_ticket):
+    def __init__(self, current_ticket, ticket = 500, parking_spaces = 500):
+        self.current_ticket = current_ticket
         self.ticket = ticket
         self.parking_spaces = parking_spaces
-        self.current_ticket = current_ticket
+        
 
     def takeTicket(self):
          self.ticket -= 1
          while True:
             duration = input("Select hours: 8 or 24?: ")
-               if duration == 8:
+            if duration == 8:
                   print("It will cost you $96.")
-               elif duration == 24:
+            elif duration == 24:
                   print("It will cost you $288.")
-        self.parking_spaces -= 1
+                  self.parking_spaces -= 1
 
     def payForParking(self):
          amount = input("Make a payment for your ticket: ")
-            self.ticket -= amount
+         self.ticket -= amount
          print("Thank you for paying for your ticket. You have 15mins to leave the garage.")
-         current_ticket.dict{paid} = True
-
+         current_ticket.dict["paid"] = True
 
     def leaveGarage(self):
-         if current_ticket.paid = True:
+         if current_ticket.paid == True:
             print("Thank you, have a nice day!")
-         elif current_ticket.paid = False:
-            print("Make payment: " amount)
+         elif current_ticket.paid == False:
+            print("Make payment: " )
          self.parking_spaces += 1
          self.ticket += 1
+
+
+
+current_ticket = {
+   "Status": "paid", 
+   "Amount": "amount",
+}        
