@@ -12,6 +12,11 @@
       - Once paid, display message "Thank you, have a nice day!"
    - Update parkingSpaces list to increase by 1 (meaning add to the parkingSpaces list)
    - Update tickets list to increase by 1 (meaning add to the tickets list)
+
+   You will need a few attributes as well:
+- tickets -> list
+- parkingSpaces -> list
+- currentTicket -> dictionary
   """
 
 
@@ -19,15 +24,30 @@
 class Garage:
     def __init__(self, ticket, parking_spaces, current_ticket):
         self.ticket = ticket
-        self.parking_space = parking_spaces
+        self.parking_spaces = parking_spaces
         self.current_ticket = current_ticket
 
     def takeTicket(self):
-        self.ticket -= 1
+         self.ticket -= 1
+         while True:
+            duration = input("Select hours: 8 or 24?: ")
+               if duration == 8:
+                  print("It will cost you $96.")
+               elif duration == 24:
+                  print("It will cost you $288.")
         self.parking_spaces -= 1
 
     def payForParking(self):
+         amount = input("Make a payment for your ticket: ")
+            self.ticket -= amount
+         print("Thank you for paying for your ticket. You have 15mins to leave the garage.")
+         current_ticket.dict{paid} = True
 
 
     def leaveGarage(self):
-        self.parking_spaces += 1
+         if current_ticket.paid = True:
+            print("Thank you, have a nice day!")
+         elif current_ticket.paid = False:
+            print("Make payment: " amount)
+         self.parking_spaces += 1
+         self.ticket += 1
